@@ -1,11 +1,19 @@
 package recursive;
 
+/*
+ * Program created to apply recursion.
+ * Exercise 1:
+ * Sum the elements of an array, and multiply it by the depth value. Everytime new array, is a new depth
+ * 
+ * Complexity:
+ * Time: O(N) -> N equivalent to each node from the arrays
+ * Space: O(D) -> where D is equivalent to the number of depth
+ */
 public class Main {
 
 	public static void main(String[] args) {
-
-		Object[] array3 = {-10,-10};
-		Object[] array2 = {4,1,array3};
+		
+		Object[] array2 = {4,1};
 		Object[] array = {1,4, array2 ,5};
 		
 		System.out.println(sumArray(1,array));
@@ -18,14 +26,14 @@ public class Main {
 		{ 
 			if(element instanceof Integer) 
 			{
-				sum = sum + ((int)element*depth);
+				sum = sum + (int)element;
 			}else 
 			{
 				sum = sum + sumArray(depth + 1, (Object[])element);
 			}
 		}
 		
-		return sum;
+		return sum * depth;
 	}
 	
 	
