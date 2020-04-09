@@ -2,8 +2,8 @@ package recursive;
 
 /*
  * Program created to apply recursion.
- * Exercise 1:
- * Sum the elements of an array, and multiply it by the depth value. Everytime new array, is a new depth
+ * Sum the elements of an array, and multiply it by the depth value. Every time there is an array inside
+ * the array, the depth increase.
  * 
  * Complexity:
  * Time: O(N) -> N equivalent to each node from the arrays
